@@ -4,7 +4,7 @@ local A = io.read()
 local i = 5
 if A == "Slot" then
  shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
-elseif A == "ATM"
+elseif A == "ATM" then
  shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
 end
 
