@@ -1,3 +1,4 @@
+--ATM
 while not disk.isPresent("bottom") do
     sleep(0)
 end
