@@ -10,7 +10,8 @@ end
 
 print("Please remove installation medium")
 while i > 0 do
- print("reboot in ",, i ,," seconds")
+ print("reboot in ".. i .." seconds")
+ sleep(1)
  i = i - 1
 end
 shell.run("reboot")
