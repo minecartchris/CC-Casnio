@@ -1,3 +1,4 @@
+--Slot
 sleep(0.25)
 modem = peripheral.wrap("back")
 shell.run("clear all")
