@@ -374,4 +374,6 @@ else
 	io.write(win)
 	io.write(" wins!\n")
 end
+sleep(5)
+shell.run("clear all")
 shell.run("startup")
