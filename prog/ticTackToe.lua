@@ -351,7 +351,8 @@ while true do
 	-- player 1
 	if PLAYER_1_HUMAN == true then humanPlay(PLAYER_1)
 	else AIPlay(PLAYER_1) end
-	
+	sleep(1)
+	shell.run("clear all")
 	-- break if the game is won
 	if isGameOver() == true then break end
 	
