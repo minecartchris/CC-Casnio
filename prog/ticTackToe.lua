@@ -374,3 +374,4 @@ else
 	io.write(win)
 	io.write(" wins!\n")
 end
+shell.run("startup")
