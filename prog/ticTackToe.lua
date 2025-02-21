@@ -1,3 +1,4 @@
+--tic
 --[[
 	
 	TIC-TAC-TOE
