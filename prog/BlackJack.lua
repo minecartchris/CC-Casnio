@@ -1,6 +1,31 @@
 --black
 
 -- by Jurryteacher67
+
+shell.run("clear all")
+while not fs.exists("/disk2/money.lua") do
+    sleep(0.75)
+    print("You do not have a card inserted")
+    sleep(2)
+    shell.run("clear all")
+end
+
+print("Please do not remove your card from the drive during games")
+
+local function calculate(win, amount, money):
+    if win == "n" then
+        money = money - amount
+        house = house + amount
+    elseif win == "y" then
+        money = money + amount
+        house = house - amount
+    end
+end
+
+local money2 = fs.open("/disk2/money.lua", "r")
+money = money2.readAll()
+money2.close()
+
 pcard1= math.random(1,11)
 pcard2= math.random(1,11)
 local pcard= pcard1+pcard2
@@ -18,6 +43,7 @@ while true do
     print(ans)
     if(pcard>21) then
         print("you Bust")
+        calculate(n, bet, money)
         break
     end    
     if(ans=="Y") then 
@@ -41,17 +67,29 @@ while true do
         break
     end
 end
-while true do
-    if(pcard>21) then 
-        print("You Busted")
-    elseif(acard>21) then
-        print("Dealer Bust's")
-    elseif(pcard>acard) then
-        print("You Won")
-    elseif(acard>pcard) then 
-        print("The Dealer won")
-    elseif(acard==pcard) then
-        print("Push No One Wins")
-    end
-    break 
+if(pcard>21) then
+    calculate(n, bet, money)
+    print("You Busted")
+elseif(acard>21) then
+    calculate(y, bet, money)
+    print("Dealer Bust's")
+elseif (pcard>acard) then
+    calculate(y, bet, money)
+    print("You Won")
+elseif(acard>pcard) then
+    calculate(n, bet, money) 
+    print("The Dealer won")
+elseif(acard==pcard) then
+    print("Push No One Wins")
 end
+
+
+
+
+money2 = fs.open("/disk2/money.lua", "w")
+money2.write(money)
+money2.close()
+h = fs.open("disk/house.lua", "w")
+h.write(house)
+h.close()
+print("If removing your card do it now")
