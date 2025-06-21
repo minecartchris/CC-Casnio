@@ -31,7 +31,7 @@ money = money2.readAll()
 money2.close()
 
 print("what is your bet?")
-bet = tonumber(bet)
+bet = 0
 local bet = io.read()
 if bet < 20 then
     bet = 20
