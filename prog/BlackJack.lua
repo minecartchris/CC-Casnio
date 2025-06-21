@@ -13,7 +13,8 @@ end
 print("Please do not remove your card from the drive during games")
 
 local function calculate(win, amount, money)
-    if not peripheral.wrap("bottom").isPresent() then
+    local disk = peripheral.wrap("bottom")
+    if not disk.isPresent() then
         os.reboot()
     end
 
@@ -30,8 +31,9 @@ local money2 = fs.open("/disk2/money.lua", "r")
 money = money2.readAll()
 money2.close()
 
+money = tonumber(money)
+
 print("what is your bet?")
-bet = 0
 local bet = io.read()
 bet = tonumber(bet)
 if bet < 20 then
@@ -39,7 +41,7 @@ if bet < 20 then
 end
 if bet > money then
     print("you don't have the money required to play")
-    print("Goodby")
+    print("Goodbye")
     sleep(5)
     os.reboot()
 end
