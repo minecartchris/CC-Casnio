@@ -33,6 +33,7 @@ money2.close()
 print("what is your bet?")
 bet = 0
 local bet = io.read()
+bet = tonumber(bet)
 if bet < 20 then
     bet = 20
 end
