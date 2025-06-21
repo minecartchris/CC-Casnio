@@ -13,7 +13,7 @@ end
 print("Please do not remove your card from the drive during games")
 
 local function calculate(win, amount, money)
-    if not peripharal.warp("bottom").isPresent() then
+    if not peripheral.wrap("bottom").isPresent() then
         os.reboot()
     end
 
