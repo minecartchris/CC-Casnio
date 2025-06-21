@@ -1,4 +1,5 @@
 
+-- by Jurryteacher67
 pcard1= math.random(1,11)
 pcard2= math.random(1,11)
 local pcard= pcard1+pcard2
