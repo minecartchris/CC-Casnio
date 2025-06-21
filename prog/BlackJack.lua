@@ -35,7 +35,7 @@ if bet > money then
     print("you don't have the money required to play")
     print("Goodby")
     sleep(5)
-    os.reboot
+    os.reboot()
 end
 
 
@@ -109,4 +109,4 @@ h.write(house)
 h.close()
 print("If removing your card do it now")
 sleep(5)
-os.reboot
+os.reboot()
