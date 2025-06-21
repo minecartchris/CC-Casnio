@@ -66,6 +66,7 @@ while true do
     if(acard<16) then
         local aans=math.random(1,11)
         acard=aans+acard
+        print("AI Card",aans)
     elseif(acard>=16) then
         break
     end
