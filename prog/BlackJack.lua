@@ -13,6 +13,10 @@ end
 print("Please do not remove your card from the drive during games")
 
 local function calculate(win, amount, money)
+    if not peripharal.warp("bottom").isPresent() then
+        os.reboot()
+    end
+
     if win == "n" then
         money = money - amount
         house = house + amount
