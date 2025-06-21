@@ -16,6 +16,9 @@ if fs.exists("startup.lua") then
         elseif data == "--tic" then
             fs.delete("startup.lua")
             shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
+        elseif data == "--black" then
+            fs.delete("startup.lua")
+            shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
         end
       
         local i = 5
@@ -29,7 +32,7 @@ if fs.exists("startup.lua") then
     end
 end
 
-print("Are you installing a Slot, ATM or tic?")
+print("Are you installing a Slot, ATM, black jack, or tictactoe?")
 local A = io.read()
 local i = 5
 if A == "Slot" then
@@ -37,6 +40,8 @@ if A == "Slot" then
 elseif A == "ATM" then
     shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
 elseif A == "tic" then
+    shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
+elseif A == "black jack" then
     shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
 end
 
