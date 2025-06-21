@@ -12,7 +12,7 @@ end
 
 print("Please do not remove your card from the drive during games")
 
-local function calculate(win, amount, money):
+local function calculate(win, amount, money)
     if win == "n" then
         money = money - amount
         house = house + amount
