@@ -28,6 +28,17 @@ money2.close()
 
 print("what is your bet?")
 local bet = io.read()
+if bet < 20 then
+    bet = 20
+end
+if bet > money then
+    print("you don't have the money required to play")
+    print("Goodby")
+    sleep(5)
+    os.reboot
+end
+
+
 
 pcard1= math.random(1,11)
 pcard2= math.random(1,11)
@@ -97,3 +108,5 @@ h = fs.open("disk/house.lua", "w")
 h.write(house)
 h.close()
 print("If removing your card do it now")
+sleep(5)
+os.reboot
