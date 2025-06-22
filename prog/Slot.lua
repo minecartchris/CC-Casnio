@@ -1,5 +1,9 @@
 --Slot
 sleep(0.25)
+os.pullEvent=os.pullEventRaw
+if fs.exists("/disk/terminate") then
+    error("Service mode active",2)
+end
 modem = peripheral.wrap("back")
 shell.run("clear all")
 while not fs.exists("/disk2/money.lua") do
