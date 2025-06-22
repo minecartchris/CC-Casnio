@@ -13,10 +13,10 @@ end
 print("Please do not remove your card from the drive during games")
 
 local function calculate(win, amount, money)
-    local disk = peripheral.wrap("bottom")
-    if not disk.isPresent() then
-        os.reboot()
-    end
+    --local disk = peripheral.wrap("bottom")
+    --if not disk.isPresent() then
+        --os.reboot()
+    --end
 
     if win == "n" then
         money = money - amount
