@@ -1,7 +1,10 @@
 --black
 
 -- by Jurryteacher67
-
+os.pullEvent=os.pullEventRaw
+if fs.exists("/disk/terminate") then
+    error("Service mode active",2)
+end
 shell.run("clear all")
 while not fs.exists("/disk2/money.lua") do
     sleep(0.75)
