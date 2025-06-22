@@ -1,3 +1,7 @@
+os.pullEvent=os.pullEventRaw
+if fs.exists("/disk/terminate") then
+    error("Service mode active",2)
+end
 --tic
 --[[
 	
