@@ -1,7 +1,7 @@
 --black
 
 -- by Jurryteacher67
-local tmp = peripheral.warp("bottom")
+local tmp = peripheral.wrap("bottom")
 tmp.ejectDisk()
 
 os.pullEvent=os.pullEventRaw
