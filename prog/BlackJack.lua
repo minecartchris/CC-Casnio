@@ -2,6 +2,7 @@
 
 -- by Jurryteacher67
 os.pullEvent=os.pullEventRaw
+print("Was Made By Gaurdian15")
 if fs.exists("/disk/terminate") then
     error("Service mode active",2)
 end
@@ -29,7 +30,7 @@ local function calculate(win, amount, money)
         house = house - amount
     end
 end
-
+print("Was Made By Gaurdian15")
 local money2 = fs.open("/disk2/money.lua", "r")
 money = money2.readAll()
 money2.close()
