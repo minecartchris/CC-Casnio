@@ -120,10 +120,10 @@ while true do
     print("Would you liek to play again")
     local PA=io.read()
     if (PA==Y) then
-        break()
+        break
     elseif (PA==N) then 
         disk.eject()
-        break()
+        break
     else
         print("Invalid Input")
     end
