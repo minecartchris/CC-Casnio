@@ -17,15 +17,18 @@ while true do
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
             end
         elseif (Ans=="No" or Ans=="no" or Ans=="N" or Ans=="n") then
-            if A == "Slot" then
+            print("Type Slot, ATM, tic, black jack to install game")
+            local B=io.read()
+            if B == "Slot" then
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
-            elseif A == "ATM" then
+            elseif B == "ATM" then
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
-            elseif A == "tic" then
+            elseif B == "tic" then
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
-            elseif A == "black jack" then
+            elseif B == "black jack" then
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
-            end
+            else
+                print("Invalid Input")
         else
             print("Invalid Input")
         end
