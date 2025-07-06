@@ -1,5 +1,5 @@
 while true do 
-    if fs.exist("startup.lua") then 
+    if fs.exists("startup.lua") then 
         print("Would you like to Update the Current Startup File")
         local Ans=io.read()
         if(Ans=="Yes" or Ans=="yes" or Ans=="y" or Ans=="Y") then 
