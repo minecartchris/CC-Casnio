@@ -119,9 +119,9 @@ money2.close()
 while true do 
     print("Would you liek to play again")
     local PA=io.read()
-    if (PA==Y) then
+    if (PA=="Y") then
         break
-    elseif (PA==N) then 
+    elseif (PA=="N") then 
         disk.eject()
         break
     else
