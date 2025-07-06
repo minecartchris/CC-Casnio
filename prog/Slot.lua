@@ -60,6 +60,20 @@ end
 money2 = fs.open("/disk2/money.lua", "w")
 money2.write(money)
 money2.close()
+
+while true do 
+    print("Would you liek to play again")
+    local PA=io.read()
+    if (PA=="Y") then
+        break
+    elseif (PA=="N") then 
+        tmp.ejectDisk()
+        break
+    else
+        print("Invalid Input")
+    end
+end
+
 h = fs.open("disk/house.lua", "w")
 h.write(house)
 h.close()
