@@ -2,7 +2,11 @@ while true do
     if fs.exists("startup.lua") then 
         print("Would you like to Update the Current Startup File")
         local Ans=io.read()
-        if(Ans=="Yes" or Ans=="yes" or Ans=="y" or Ans=="Y") then 
+        if(Ans=="Yes" or Ans=="yes" or Ans=="y" or Ans=="Y") then
+            local soft = fs.open("startup.lua", "r")
+            local data = soft.readLine()
+            soft.close()
+            print("file read")
             if data == "--ATM" then
                 fs.delete("startup.lua")
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
