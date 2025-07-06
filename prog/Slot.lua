@@ -38,6 +38,7 @@ randnum = tonumber(math.random(0, 14) + 1)
 if userGess == randnum then
     winner = true
 end
+house = tonumber(house)
 if not winner then
     print("you lost ;(")
     print("The correct number was", randnum)
