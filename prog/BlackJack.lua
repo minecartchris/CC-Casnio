@@ -1,6 +1,9 @@
 --black
 
 -- by Jurryteacher67
+local tmp = peripheral.warp("bottom")
+tmp.ejectDisk()
+
 os.pullEvent=os.pullEventRaw
 print("Was Made By Gaurdian15")
 if fs.exists("/disk/terminate") then
@@ -122,7 +125,7 @@ while true do
     if (PA=="Y") then
         break
     elseif (PA=="N") then 
-        disk.eject()
+        tmp.ejectDisk()
         break
     else
         print("Invalid Input")
