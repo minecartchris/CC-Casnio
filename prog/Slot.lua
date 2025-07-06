@@ -2,7 +2,6 @@
 sleep(0.25)
 
 local tmp = peripheral.wrap("bottom")
-tmp.ejectDisk()
 
 os.pullEvent=os.pullEventRaw
 if fs.exists("/disk/terminate") then
