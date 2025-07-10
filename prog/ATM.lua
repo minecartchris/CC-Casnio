@@ -4,46 +4,40 @@ while not disk.isPresent("bottom") do
 end
 print("D or W")
 local A = io.read()
+local db = fs.open("/disk2/log.log", "a")
 if A == "D" then
     local I = turtle.getItemDetail()
-    if I.name ~= "minecraft:emerald" or I.name == nil then
-        print("Please insert gold")
+    if I.name ~= "minecraft:iron_ingot" or I.name == nil then
+        print("Please insert iron ingot")
         sleep(1)
         shell.run("reboot")
     end
     local dims = turtle.getItemCount()
     local disk = fs.open("/disk/money.lua", "r")
-    dims = dims * 10
+    dims = dims
     money = disk.readAll()
     disk.close()
     money = tonumber(money)
     money = money + dims
-    turtle.forward()
-    turtle.turnRight()
     turtle.drop()
-    turtle.turnRight()
-    turtle.forward()
     disk = fs.open("/disk/money.lua", "w")
     disk.write(money)
+    db.write(dims.."\n")
     disk.close()
     print("you have $", money, "Now!!" )
     sleep(3)
 elseif A == "W" then
-    print("amount 10 = 1 ingot enter in incrmets of 10")
+    print("amount of ingots to withdraw")
     A = io.read()
     disk = fs.open("/disk/money.lua", "r")
     money = disk.readAll()
     disk.close()
     money = money - A
-    turtle.forward()
-    turtle.turnRight()
-    turtle.suck(A / 10)
-    turtle.turnRight()
-    turtle.forward()
+    turtle.suck(A)
+    db.write(A.."\n")
     disk = fs.open("/disk/money.lua", "w")
     disk.write(money)
     disk.close()
 end
-turtle.turnLeft()
-turtle.turnLeft()
+db.close()
 shell.run("reboot")
