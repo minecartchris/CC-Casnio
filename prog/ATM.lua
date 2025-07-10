@@ -5,6 +5,7 @@ end
 print("D or W")
 local A = io.read()
 local db = fs.open("/disk2/log.log", "a")
+local id = disk.getID("bottom")
 if A == "D" then
     local I = turtle.getItemDetail()
     if I.name ~= "minecraft:iron_ingot" or I.name == nil then
@@ -22,7 +23,7 @@ if A == "D" then
     turtle.drop()
     disk = fs.open("/disk/money.lua", "w")
     disk.write(money)
-    db.write(dims.."\n")
+    db.write(dims..id.."\n")
     disk.close()
     print("you have $", money, "Now!!" )
     sleep(3)
@@ -34,7 +35,7 @@ elseif A == "W" then
     disk.close()
     money = money - A
     turtle.suck(A)
-    db.write(A.."\n")
+    db.write(A..id.."\n")
     disk = fs.open("/disk/money.lua", "w")
     disk.write(money)
     disk.close()
