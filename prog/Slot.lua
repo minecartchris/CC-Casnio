@@ -1,8 +1,6 @@
 --Slot
 sleep(0.25)
 
-local tmp = peripheral.wrap("bottom")
-
 os.pullEvent=os.pullEventRaw
 if fs.exists("/disk/terminate") then
     error("Service mode active",2)
