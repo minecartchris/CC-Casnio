@@ -1,4 +1,5 @@
 -- This will install the selected program
+local serverPath = "https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/"
 if fs.exists("startup.lua") then
     print("do you want to update existing file?")
     local A = io.read()
