@@ -1,3 +1,4 @@
+local serverPath = "https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/"
 while true do 
     if fs.exists("startup.lua") then 
         print("Would you like to Update the Current Startup File")
@@ -9,7 +10,7 @@ while true do
             print("file read")
             if data == "--ATM" then
                 fs.delete("startup.lua")
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
+                shell.run("wget "..serverPath.."/ATM.lua startup.lua")
             elseif data == "--Slot" then
                 fs.delete("startup.lua")
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
