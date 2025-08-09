@@ -1,4 +1,4 @@
-local serverPath = "https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/"
+local serverPath = ""..serverPath.."/"
 while true do 
     if fs.exists("startup.lua") then 
         print("Would you like to Update the Current Startup File")
@@ -13,28 +13,28 @@ while true do
                 shell.run("wget "..serverPath.."/ATM.lua startup.lua")
             elseif data == "--Slot" then
                 fs.delete("startup.lua")
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
+                shell.run("wget "..serverPath.."/Slot.lua startup.lua")
             elseif data == "--tic" then
                 fs.delete("startup.lua")
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
+                shell.run("wget "..serverPath.."/ticTackToe.lua startup.lua")
             elseif data == "--black" then
                 fs.delete("startup.lua")
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
+                shell.run("wget "..serverPath.."/BlackJack.lua startup.lua")
             end
         elseif (Ans=="No" or Ans=="no" or Ans=="N" or Ans=="n") then
             print("Type Slot, ATM, tic, black jack to install game")
             local B=io.read()
             if B == "Slot" then
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
+                shell.run("wget "..serverPath.."/Slot.lua startup.lua")
                 break
             elseif B == "ATM" then
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
+                shell.run("wget "..serverPath.."/ATM.lua startup.lua")
                 break
             elseif B == "tic" then
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
+                shell.run("wget "..serverPath.."/ticTackToe.lua startup.lua")
                 break
             elseif B == "black jack" then
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
+                shell.run("wget "..serverPath.."/BlackJack.lua startup.lua")
                 break
             else
                 print("Invalid Input")
@@ -46,16 +46,16 @@ while true do
         print("Type Slot, ATM, tic, black jack to install game")
         local B=io.read()
         if B == "Slot" then
-            shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
+            shell.run("wget "..serverPath.."/Slot.lua startup.lua")
             break
         elseif B == "ATM" then
-            shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
+            shell.run("wget "..serverPath.."/ATM.lua startup.lua")
             break
         elseif B == "tic" then
-            shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
+            shell.run("wget "..serverPath.."/ticTackToe.lua startup.lua")
             break
         elseif B == "black jack" then
-            shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
+            shell.run("wget "..serverPath.."/BlackJack.lua startup.lua")
             break
         else
             print("Invalid Input")
