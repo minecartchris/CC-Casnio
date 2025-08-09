@@ -1,4 +1,4 @@
-local serverPath = ""..serverPath.."/"
+local serverPath = "https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/"
 while true do 
     if fs.exists("startup.lua") then 
         print("Would you like to Update the Current Startup File")
